@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="3" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="3" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -7852,8 +7852,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </class>
 </classes>
 <parts>
-<part name="C2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="2,5-3" package3d_urn="urn:adsk.eagle:package:5436/1" value="100nF"/>
-<part name="OK1" library="optocoupler" library_urn="urn:adsk.eagle:library:320" deviceset="PC817" device="" package3d_urn="urn:adsk.eagle:package:21938/1"/>
+<part name="OPTO" library="optocoupler" library_urn="urn:adsk.eagle:library:320" deviceset="PC817" device="" package3d_urn="urn:adsk.eagle:package:21938/1"/>
 <part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="1k"/>
 <part name="R2" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="1k"/>
 <part name="D5" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1"/>
@@ -7861,26 +7860,23 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="R4" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="1k"/>
 <part name="C1" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="5/2.5" package3d_urn="urn:adsk.eagle:package:5426/1" value="100nF"/>
 <part name="ZIC1" library="atmel" deviceset="AT90S4433" device="P" value="ATMEGA8"/>
-<part name="Q2" library="special" deviceset="XTAL/S" device="" value="16MHz"/>
+<part name="CRISTAL" library="special" deviceset="XTAL/S" device="" value="16MHz"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="S1" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
+<part name="BOTÃO" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="0207/7" package3d_urn="urn:adsk.eagle:package:25942/1" value="10k"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="X5" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2021" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="X6" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2021" device=""/>
 <part name="P+4" library="supply1" deviceset="+5V" device="" value="+12V"/>
-<part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
-<part name="X1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2021" device=""/>
+<part name="X1" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2021" device="" value="RPM"/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="C3" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="5/2.5" package3d_urn="urn:adsk.eagle:package:5426/1" value="100nF"/>
@@ -7899,24 +7895,22 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="C8" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="5/2.5" package3d_urn="urn:adsk.eagle:package:5426/1" value="100nF"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="X2" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device=""/>
+<part name="X2" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" value="COMB 1"/>
 <part name="P+10" library="supply1" deviceset="+5V" device="" value="+12V"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="X3" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device=""/>
+<part name="X3" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" value="COMB 2"/>
 <part name="P+11" library="supply1" deviceset="+5V" device="" value="+12V"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="X4" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2071" device=""/>
+<part name="X4" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2071" device="" value="MODULE CAN"/>
+<part name="X7" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" value="FORÇA"/>
+<part name="C2" library="capacitor-wima" library_urn="urn:adsk.eagle:library:116" deviceset="C" device="5/2.5" package3d_urn="urn:adsk.eagle:package:5426/1" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="C2" gate="G$1" x="-204.47" y="91.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="-204.089" y="89.916" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="-209.169" y="89.916" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="OK1" gate="A" x="-130.81" y="127" smashed="yes">
+<instance part="OPTO" gate="A" x="-130.81" y="127" smashed="yes">
 <attribute name="NAME" x="-137.795" y="132.715" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-137.795" y="119.38" size="1.778" layer="96"/>
 </instance>
@@ -7948,7 +7942,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <attribute name="VALUE" x="43.18" y="95.25" size="1.778" layer="96"/>
 <attribute name="NAME" x="43.18" y="156.972" size="1.778" layer="95"/>
 </instance>
-<instance part="Q2" gate="G$1" x="17.78" y="144.78" smashed="yes" rot="R270">
+<instance part="CRISTAL" gate="G$1" x="17.78" y="144.78" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.59" y="149.86" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="12.7" y="149.86" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -7961,7 +7955,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND2" gate="1" x="22.86" y="113.03" smashed="yes">
 <attribute name="VALUE" x="20.32" y="110.49" size="1.778" layer="96"/>
 </instance>
-<instance part="S1" gate="1" x="17.78" y="161.29" smashed="yes">
+<instance part="BOTÃO" gate="1" x="17.78" y="161.29" smashed="yes">
 <attribute name="NAME" x="11.43" y="158.75" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="13.97" y="164.465" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -7975,31 +7969,14 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="GND1" gate="1" x="26.67" y="161.29" smashed="yes">
 <attribute name="VALUE" x="24.13" y="158.75" size="1.778" layer="96"/>
 </instance>
-<instance part="X5" gate="-1" x="11.43" y="77.47" smashed="yes">
-<attribute name="NAME" x="13.97" y="76.708" size="1.524" layer="95"/>
-<attribute name="VALUE" x="10.668" y="78.867" size="1.778" layer="96"/>
-</instance>
-<instance part="X5" gate="-2" x="11.43" y="74.93" smashed="yes">
-<attribute name="NAME" x="13.97" y="74.168" size="1.524" layer="95"/>
-</instance>
 <instance part="P+2" gate="1" x="1.27" y="85.09" smashed="yes">
 <attribute name="VALUE" x="3.175" y="87.63" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND3" gate="1" x="1.27" y="71.12" smashed="yes">
 <attribute name="VALUE" x="-1.27" y="68.58" size="1.778" layer="96"/>
 </instance>
-<instance part="X6" gate="-1" x="12.7" y="55.88" smashed="yes">
-<attribute name="NAME" x="15.24" y="55.118" size="1.524" layer="95"/>
-<attribute name="VALUE" x="11.938" y="57.277" size="1.778" layer="96"/>
-</instance>
-<instance part="X6" gate="-2" x="12.7" y="53.34" smashed="yes">
-<attribute name="NAME" x="15.24" y="52.578" size="1.524" layer="95"/>
-</instance>
 <instance part="P+4" gate="1" x="2.54" y="62.23" smashed="yes">
 <attribute name="VALUE" x="3.175" y="64.77" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="GND4" gate="1" x="2.54" y="46.99" smashed="yes">
-<attribute name="VALUE" x="0" y="44.45" size="1.778" layer="96"/>
 </instance>
 <instance part="GND5" gate="1" x="-191.77" y="95.25" smashed="yes">
 <attribute name="VALUE" x="-194.31" y="92.71" size="1.778" layer="96"/>
@@ -8128,19 +8105,33 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="X4" gate="-5" x="160.02" y="151.13"/>
 <instance part="X4" gate="-6" x="160.02" y="148.59"/>
 <instance part="X4" gate="-7" x="160.02" y="146.05"/>
+<instance part="X7" gate="-1" x="22.86" y="69.85" smashed="yes">
+<attribute name="NAME" x="25.4" y="69.088" size="1.524" layer="95"/>
+<attribute name="VALUE" x="22.098" y="71.247" size="1.778" layer="96"/>
+</instance>
+<instance part="X7" gate="-2" x="22.86" y="67.31" smashed="yes">
+<attribute name="NAME" x="25.4" y="66.548" size="1.524" layer="95"/>
+</instance>
+<instance part="X7" gate="-3" x="22.86" y="64.77" smashed="yes">
+<attribute name="NAME" x="25.4" y="64.008" size="1.524" layer="95"/>
+</instance>
+<instance part="C2" gate="G$1" x="-204.47" y="91.44" smashed="yes" rot="R270">
+<attribute name="NAME" x="-207.899" y="89.916" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-204.089" y="91.186" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="GND" class="0">
 <segment>
-<pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-201.93" y1="91.44" x2="-198.12" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-198.12" y1="91.44" x2="-198.12" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="-198.12" y1="97.79" x2="-191.77" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="V-"/>
 <junction x="-198.12" y="97.79"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -8179,16 +8170,14 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X5" gate="-2" pin="S"/>
-<wire x1="8.89" y1="74.93" x2="1.27" y2="74.93" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="74.93" x2="1.27" y2="74.93" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="1.27" y1="74.93" x2="1.27" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="X6" gate="-2" pin="S"/>
-<wire x1="10.16" y1="53.34" x2="2.54" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="2.54" y1="53.34" x2="2.54" y2="49.53" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="74.93" x2="10.16" y2="67.31" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="67.31" x2="17.78" y2="67.31" width="0.1524" layer="91"/>
+<pinref part="X7" gate="-3" pin="S"/>
+<wire x1="17.78" y1="67.31" x2="17.78" y2="64.77" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="64.77" x2="20.32" y2="64.77" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="143.51" y1="148.59" x2="143.51" y2="142.24" width="0.1524" layer="91"/>
@@ -8197,8 +8186,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="143.51" y1="148.59" x2="157.48" y2="148.59" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="S"/>
-<pinref part="S1" gate="1" pin="S1"/>
+<pinref part="BOTÃO" gate="1" pin="S"/>
+<pinref part="BOTÃO" gate="1" pin="S1"/>
 <wire x1="17.78" y1="166.37" x2="20.32" y2="166.37" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="166.37" x2="17.78" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="170.18" x2="26.67" y2="170.18" width="0.1524" layer="91"/>
@@ -8264,12 +8253,11 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="-120.65" y1="139.7" x2="-120.65" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="OK1" gate="A" pin="COL"/>
+<pinref part="OPTO" gate="A" pin="COL"/>
 <wire x1="-123.19" y1="129.54" x2="-120.65" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="-120.65" y1="129.54" x2="-120.65" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="-209.55" y1="91.44" x2="-213.36" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-213.36" y1="91.44" x2="-213.36" y2="97.79" width="0.1524" layer="91"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
@@ -8277,6 +8265,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="-217.17" y1="97.79" x2="-217.17" y2="100.33" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="P" pin="V+"/>
 <junction x="-213.36" y="97.79"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="147.32" y1="151.13" x2="139.7" y2="151.13" width="0.1524" layer="91"/>
@@ -8288,16 +8277,18 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="147.32" y1="146.05" x2="157.48" y2="146.05" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="X5" gate="-1" pin="S"/>
-<wire x1="8.89" y1="77.47" x2="1.27" y2="77.47" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
 <wire x1="1.27" y1="77.47" x2="1.27" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="1.27" y1="77.47" x2="16.51" y2="77.47" width="0.1524" layer="91"/>
+<wire x1="16.51" y1="77.47" x2="16.51" y2="69.85" width="0.1524" layer="91"/>
+<pinref part="X7" gate="-1" pin="S"/>
+<wire x1="16.51" y1="69.85" x2="20.32" y2="69.85" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="OK1" gate="A" pin="A"/>
+<pinref part="OPTO" gate="A" pin="A"/>
 <wire x1="-143.51" y1="129.54" x2="-140.97" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="-143.51" y1="140.97" x2="-143.51" y2="129.54" width="0.1524" layer="91"/>
@@ -8334,7 +8325,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="OK1" gate="A" pin="EMIT"/>
+<pinref part="OPTO" gate="A" pin="EMIT"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="-123.19" y1="124.46" x2="-118.11" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="-118.11" y1="124.46" x2="-102.87" y2="124.46" width="0.1524" layer="91"/>
@@ -8344,7 +8335,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </net>
 <net name="RPM_GND" class="0">
 <segment>
-<pinref part="OK1" gate="A" pin="C"/>
+<pinref part="OPTO" gate="A" pin="C"/>
 <wire x1="-140.97" y1="124.46" x2="-170.18" y2="124.46" width="0.1524" layer="91"/>
 <label x="-170.18" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -8374,7 +8365,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <wire x1="17.78" y1="149.86" x2="-2.54" y2="149.86" width="0.1524" layer="91"/>
 <label x="7.62" y="149.86" size="1.778" layer="95" rot="R180"/>
-<pinref part="Q2" gate="G$1" pin="1"/>
+<pinref part="CRISTAL" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="149.86" x2="26.67" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="26.67" y1="149.86" x2="26.67" y2="146.05" width="0.1524" layer="91"/>
 <junction x="17.78" y="149.86"/>
@@ -8388,7 +8379,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <wire x1="17.78" y1="139.7" x2="-2.54" y2="139.7" width="0.1524" layer="91"/>
 <label x="7.62" y="139.7" size="1.778" layer="95" rot="R180"/>
-<pinref part="Q2" gate="G$1" pin="2"/>
+<pinref part="CRISTAL" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="139.7" x2="26.67" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="26.67" y1="139.7" x2="26.67" y2="140.97" width="0.1524" layer="91"/>
 <junction x="17.78" y="139.7"/>
@@ -8400,8 +8391,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="S1" gate="1" pin="P"/>
-<pinref part="S1" gate="1" pin="P1"/>
+<pinref part="BOTÃO" gate="1" pin="P"/>
+<pinref part="BOTÃO" gate="1" pin="P1"/>
 <wire x1="17.78" y1="156.21" x2="20.32" y2="156.21" width="0.1524" layer="91"/>
 <pinref part="ZIC1" gate="G$1" pin="RESET"/>
 <wire x1="17.78" y1="156.21" x2="17.78" y2="153.67" width="0.1524" layer="91"/>
@@ -8461,11 +8452,13 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </net>
 <net name="+12V" class="0">
 <segment>
-<pinref part="X6" gate="-1" pin="S"/>
-<wire x1="10.16" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="55.88" x2="2.54" y2="59.69" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<label x="6.35" y="58.42" size="1.778" layer="95"/>
+<wire x1="15.24" y1="55.88" x2="15.24" y2="64.77" width="0.1524" layer="91"/>
+<pinref part="X7" gate="-2" pin="S"/>
+<wire x1="15.24" y1="64.77" x2="20.32" y2="64.77" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="64.77" x2="20.32" y2="67.31" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="X2" gate="-1" pin="S"/>
@@ -8518,6 +8511,13 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="-68.58" y1="38.1" x2="-62.23" y2="38.1" width="0.1524" layer="91"/>
 <junction x="-68.58" y="38.1"/>
 <label x="-62.23" y="38.1" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="ZIC1" gate="G$1" pin="(T0)PD4"/>
+<wire x1="76.2" y1="110.49" x2="90.17" y2="110.49" width="0.1524" layer="91"/>
+<wire x1="90.17" y1="110.49" x2="90.17" y2="115.57" width="0.1524" layer="91"/>
+<wire x1="90.17" y1="115.57" x2="93.98" y2="115.57" width="0.1524" layer="91"/>
+<label x="93.98" y="115.57" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$12" class="0">
