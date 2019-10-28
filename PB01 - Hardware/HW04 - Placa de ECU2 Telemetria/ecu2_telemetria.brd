@@ -1987,7 +1987,6 @@ design rules under a new name.</description>
 <contactref element="X4" pad="6"/>
 <contactref element="C2" pad="1"/>
 <contactref element="X7" pad="3"/>
-<contactref element="IC1" pad="8"/>
 <contactref element="SV8" pad="2"/>
 <contactref element="X1" pad="2"/>
 <contactref element="X5" pad="2"/>
@@ -2023,7 +2022,26 @@ design rules under a new name.</description>
 <wire x1="133.731" y1="24.6888" x2="133.21665" y2="25.20315" width="0.6096" layer="16"/>
 <via x="130.81635" y="-10.287" extent="1-16" drill="0.8"/>
 <via x="130.81635" y="-14.23035" extent="1-16" drill="0.8"/>
-<wire x1="130.81635" y1="-10.287" x2="130.81635" y2="-14.23035" width="0" layer="19" extent="1-1"/>
+<wire x1="160.344" y1="7.271" x2="181.3941" y2="-6.1722" width="0" layer="19" extent="16-16"/>
+<wire x1="152.724" y1="4.731" x2="160.344" y2="7.271" width="0" layer="19" extent="1-1"/>
+<wire x1="147.415" y1="-3.772" x2="152.724" y2="4.731" width="0" layer="19" extent="1-1"/>
+<wire x1="147.415" y1="-8.744" x2="147.415" y2="-3.772" width="0" layer="19" extent="1-1"/>
+<wire x1="142.3349" y1="2.40015" x2="147.415" y2="-3.772" width="0" layer="19" extent="1-1"/>
+<wire x1="142.5069" y1="12.1728" x2="142.3349" y2="2.40015" width="0" layer="19" extent="1-1"/>
+<wire x1="142.91945" y1="24.003" x2="142.5069" y2="12.1728" width="0" layer="19" extent="1-1"/>
+<wire x1="133.731" y1="24.6888" x2="142.91945" y2="24.003" width="0" layer="19" extent="16-16"/>
+<wire x1="125.4699" y1="24.86035" x2="131.8085" y2="25.33805" width="0" layer="19" extent="16-16"/>
+<wire x1="126.00965" y1="21.2914" x2="125.4699" y2="24.86035" width="0" layer="19" extent="1-1"/>
+<wire x1="119.50725" y1="21.2914" x2="126.00965" y2="21.2914" width="0" layer="19" extent="1-1"/>
+<wire x1="116.04015" y1="25.0319" x2="119.50725" y2="21.2914" width="0" layer="19" extent="1-1"/>
+<wire x1="113.157" y1="20.0274" x2="116.04015" y2="25.0319" width="0" layer="19" extent="1-1"/>
+<wire x1="119.84335" y1="8.78175" x2="119.50725" y2="21.2914" width="0" layer="19" extent="1-1"/>
+<wire x1="112.98535" y1="2.08875" x2="119.84335" y2="8.78175" width="0" layer="19" extent="1-1"/>
+<wire x1="120.01525" y1="-2.3623" x2="112.98535" y2="2.08875" width="0" layer="19" extent="1-1"/>
+<wire x1="113.32825" y1="-9.2263" x2="120.01525" y2="-2.3623" width="0" layer="19" extent="1-1"/>
+<wire x1="130.81635" y1="-10.287" x2="120.01525" y2="-2.3623" width="0" layer="19" extent="1-1"/>
+<wire x1="130.81635" y1="-14.23035" x2="130.81635" y2="-10.287" width="0" layer="19" extent="1-1"/>
+<wire x1="158.4198" y1="-25.1714" x2="147.415" y2="-8.744" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="ZIC1" pad="7"/>
@@ -2034,7 +2052,6 @@ design rules under a new name.</description>
 <wire x1="160.8582" y1="2.19075" x2="160.344" y2="2.191" width="0.6096" layer="16"/>
 <contactref element="X7" pad="1"/>
 <contactref element="C2" pad="2"/>
-<contactref element="IC1" pad="4"/>
 <contactref element="SV8" pad="1"/>
 <contactref element="X1" pad="1"/>
 <contactref element="X5" pad="1"/>
@@ -2046,7 +2063,6 @@ design rules under a new name.</description>
 <wire x1="166.13505" y1="-13.54455" x2="181.56555" y2="-13.54455" width="0.6096" layer="16"/>
 <wire x1="181.56555" y1="-13.54455" x2="185.0706" y2="-10.0395" width="0.6096" layer="16"/>
 <wire x1="185.0706" y1="-10.0395" x2="185.0706" y2="-8.57295" width="0.6096" layer="16"/>
-<wire x1="129.921" y1="4.4196" x2="131.50215" y2="6.00075" width="0.6096" layer="16"/>
 <wire x1="131.50215" y1="6.00075" x2="131.50215" y2="7.5438" width="0.6096" layer="16"/>
 <wire x1="131.50215" y1="7.5438" x2="130.81635" y2="8.2296" width="0.6096" layer="16"/>
 <wire x1="130.81635" y1="8.2296" x2="127.38735" y2="8.2296" width="0.6096" layer="16"/>
@@ -2315,6 +2331,12 @@ design rules under a new name.</description>
 <vertex x="129.6162" y="-15.94485"/>
 <vertex x="160.4772" y="-15.94485"/>
 </polygon>
+</signal>
+<signal name="V-">
+<contactref element="IC1" pad="4"/>
+</signal>
+<signal name="V+">
+<contactref element="IC1" pad="8"/>
 </signal>
 </signals>
 <errors>
