@@ -1,0 +1,13 @@
+G04 Gerber job file.*
+%TF.FileFunction,JobInfo*%
+%TF.GenerationSoftware,Autodesk,EAGLE,9.0.0*%
+%TF.CreationDate,2019-10-07T20:04:45Z*%
+%TF.Part,Single*%
+%MOMM*%
+%TJ.B_Owner,Matheus Torres <matheus.rocha@ee.ufcg.edu.br>*%
+%TJ.B_ID,PlacaLEDS*%
+%TJ.B_LayerNum,2*%
+%TJ.B_Thickness,1.570000*%
+%TJ.B_Size_X,96.000000*%
+%TJ.B_Size_Y,29.000000*%
+M02*
