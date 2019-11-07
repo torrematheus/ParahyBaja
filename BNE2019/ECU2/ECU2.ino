@@ -1,33 +1,37 @@
+#include <SoftwareSerial.h>
 #include <FastIO.h>
 #include <I2CIO.h>
 #include <LCD.h>
 #include <LiquidCrystal.h>
 #include <LiquidCrystal_I2C.h>
-#include <SoftwareSerial.h>
 #include <mcp_can.h>
-#include <mcp_can_dfs.h>
 #include <SPI.h>
 
 //Configuração do Display
 #define build 1
 #define revision 1
 
+//Pinos
 const int CSPin = 10;
-const int VELPin1 = 2;
-const int VELPin2 = 3;
-float velocidade = 0, velocidade1 =0, velocidade2 = 0, RPM = 0;
-uint8_t comb_buf;
+const int VELPin = 2;
+const int LEDPin = 6;
 
+//Flags
 const int quantidadePinosVel = 1;
 const int INICIO = 254;
 const int FIM = 253;
 
-volatile int contadorVel1=0, contadorVel2=0;
+//Variaveis
+float velocidade = 0, velocidade1 =0, RPM = 0;
+uint8_t comb_buf;
+bool COMB;
+int indice;
+volatile int contadorVel1=0;
 float dist = 3.14*0.277*float(quantidadePinosVel)/2;
-unsigned long TempoVel1=0, TempoAtual=0, TempoVel2=0, TempoAntigo = 0; 
+unsigned long TempoVel1=0, TempoAtual=0, TempoAntigo = 0; 
 
 MCP_CAN CAN(CSPin);
-SoftwareSerial HC12(8,9 ); //RX,TX
+SoftwareSerial HC12(9,8); //RX,TX
 LiquidCrystal_I2C lcd(0x3F,2,1,0,4,5,6,7,3, POSITIVE);
 
 // ================================================ DISPLAY ========================================================
@@ -184,8 +188,7 @@ void preenche_lcd(){
   delay(1);
 }
 
-
-void Display(float velocidade, float rpm, uint8_t comb){
+void Display(float velocidade, float rpm, bool comb){
   
   char char_saida;
   lcd.clear();
@@ -196,7 +199,7 @@ void Display(float velocidade, float rpm, uint8_t comb){
   writeBigString(&char_saida, 7, 1);
   
   
-  if(rpm >= 1500 && rpm < 3000){
+  if(rpm >= 1000 && rpm < 2000){
   
      lcd.setCursor(16,0);
      lcd.write(0X20);
@@ -209,7 +212,7 @@ void Display(float velocidade, float rpm, uint8_t comb){
   
 }
 
-  else if(rpm >= 3000 && rpm < 4500 )
+  else if(rpm >= 2000 && rpm < 3000 )
     {
 
      lcd.setCursor(16,0);
@@ -222,7 +225,7 @@ void Display(float velocidade, float rpm, uint8_t comb){
      lcd.write(0xFF);
 
    }
-   else if(rpm >= 4500)
+   else if(rpm >= 3000 && rpm <= 4000)
     {
     lcd.setCursor(16,0);
      lcd.write(0X20);
@@ -235,7 +238,7 @@ void Display(float velocidade, float rpm, uint8_t comb){
 
     }
 
-  else if(rpm >= 0 && rpm < 1500 )
+  else if(rpm >= 0 && rpm < 1000 )
         {
      lcd.setCursor(16,0);
      lcd.write(0X20);
@@ -247,19 +250,7 @@ void Display(float velocidade, float rpm, uint8_t comb){
      lcd.write(0x20);
 } 
 
-if(comb == 0){
-
-     lcd.setCursor(3,0);
-     lcd.write(0xFF);
-     lcd.setCursor(3,1);
-     lcd.write(0xFF);
-     lcd.setCursor(3,2);
-     lcd.write(0xFF);
-     lcd.setCursor(3,3);
-     lcd.write(0xFF);
-}
-
-else if(comb == 1){
+ if(comb == 1){
 
      lcd.setCursor(3,0);
      lcd.write(0x20);
@@ -270,10 +261,18 @@ else if(comb == 1){
      lcd.setCursor(3,3);
      lcd.write(0xFF);
 }
-
-
+else{
+  lcd.setCursor(3,0);
+     lcd.write(0xFF);
+     lcd.setCursor(3,1);
+     lcd.write(0xFF);
+     lcd.setCursor(3,2);
+     lcd.write(0xFF);
+     lcd.setCursor(3,3);
+     lcd.write(0xFF);
 }
 
+}
 
 void transmissaoHC12(float velocidade, float RPM_Funcao){
   
@@ -292,119 +291,6 @@ void transmissaoHC12(float velocidade, float RPM_Funcao){
 
 }
 
-void setup()
-{
-    Serial.begin(9600);
-    HC12.begin(9600);
-    lcd.begin(20,4);
-    preenche_lcd();
-
-    attachInterrupt(digitalPinToInterrupt(VELPin1), ContaVelocidade1, RISING);           //Definindo função de interrupção para velocidade
-    attachInterrupt(digitalPinToInterrupt(VELPin2), ContaVelocidade2, RISING);                 //Definindo função de interrupção para rpm
-    
-   //Cria 8 caracteres personalizados 
-    for (nb=0; nb<8; nb++ ) {   
-      for (bc=0; bc<8; bc++) bb[bc]= pgm_read_byte( &custom[nb][bc] );
-      lcd.createChar ( nb+1, bb );
-    }
-
-    while (CAN_OK != CAN.begin(CAN_500KBPS))
-    {
-        Serial.println("CAN BUS Init Failed");
-        delay(100);
-    }
-    Serial.println("CAN BUS  Init OK!");
-}
-
-
-void loop()
-{
-    unsigned char len = 0;  // len vai armazenar o tamanho da mensagem recebida
-    uint8_t buf[8];         //buf vai armazenar a mensagem recebida 
-
-    if(CAN_MSGAVAIL == CAN.checkReceive())  // Verifica se chegou alguma mensagem
-    {
-        CAN.readMsgBuf(&len, buf);          // Lê a mensagem
-
-        unsigned long canId = CAN.getCanId(); //Lê o Id da mensagem e armazena na variavel canID
-
-        Serial.println("-----------------------------");
-        Serial.print("Data from ID: ");
-        Serial.println(canId, DEC);
-
-        if(canId == 0x66D){               //Verifica se a mensagmem recebida é de rpm
-            
-            uint8_t rpm_buf[4];  
-
-           // comb_buf = buf[0];          
-            for(int i = 0; i<len-1; i++)
-            {    
-                rpm_buf[i] = buf[i];        //Armazena os dados no array aux_rpm                       
-            }   
-
-            comb_buf = buf[len-1];
-
-            Serial.print(comb_buf);
-            uint8_to_float(&RPM, rpm_buf);  // Converte o array em float e armazena na variavel RPM
-        }
-
-    }
-
-    TempoAtual = millis();  
-                                                     
-  if(TempoAtual-TempoVel1>2000)                                                   //Se não houver alteração na velocidade em 2000 milisegundos, então VELOCIDADE SERÁ 0
-    velocidade1=0;
-  if(TempoAtual-TempoVel2>2000)                                                   //Se não houver alteração na velocidade em 2000 milisegundos, então RPM SERÁ 0
-    velocidade2=0;
-
-  if(contadorVel1>quantidadePinosVel-1)
-  {
-    noInterrupts();
-    velocidade1=3600.0*dist/float(TempoAtual-TempoVel1);                           //Velocidade = ------------------------------- = 3600* ---------
-    TempoVel1 = TempoAtual;                                                       //             tempo(ms)*1000(km)                      tempo(ms)
-    contadorVel1=0;
-    interrupts();
-  }
-
-   if(contadorVel2>quantidadePinosVel-1)
-  {
-    noInterrupts();
-    velocidade2=3600.0*dist/float(TempoAtual-TempoVel2);                           //Velocidade = ------------------------------- = 3600* ---------
-    TempoVel2 = TempoAtual;                                                       //             tempo(ms)*1000(km)                      tempo(ms)
-    contadorVel2=0;
-    interrupts();
-  }
-
-  velocidade = (velocidade1 + velocidade2)/2;
-  
-  if(TempoAtual-TempoAntigo>200)
-  {
-  noInterrupts();
-  transmissaoHC12(velocidade, RPM); 
-  interrupts();
-  TempoAntigo = TempoAtual;
-  }
-  
-    /*Serial.print("Combustivel: \n");
-    Serial.println(comb_buf);
-    Serial.print("RPM: \n");
-    Serial.println(RPM);*/
-    Display(velocidade, RPM, comb_buf);
-}
-
-void ContaVelocidade1(){
-  noInterrupts();
-  contadorVel1++;
-  interrupts();
-}
-
-void ContaVelocidade2(){
-  noInterrupts();
-  contadorVel2;
-  interrupts();
- }
-
-
 void uint8_to_float(float *valor, uint8_t data[])
 {
   unsigned char receiveds[sizeof(float)];
@@ -422,6 +308,134 @@ void uint8_to_float(float *valor, uint8_t data[])
   *valor = received;
 }
 
+void setup()
+{
+    //HC12.begin(115200);
+    HC12.begin(9600);
+    lcd.begin(20,4);
+    preenche_lcd();
+    pinMode(LEDPin, OUTPUT);
+
+    attachInterrupt(digitalPinToInterrupt(VELPin), ContaVelocidade, RISING); 
+
+     //Cria 8 caracteres personalizados 
+    for (nb=0; nb<8; nb++ ) {   
+      for (bc=0; bc<8; bc++) bb[bc]= pgm_read_byte( &custom[nb][bc] );
+      lcd.createChar ( nb+1, bb );
+    } 
+    
+    while (CAN_OK != CAN.begin(CAN_500KBPS))
+    {
+        HC12.println("CAN BUS Init Failed");
+        delay(100);
+    }
+    HC12.println("CAN BUS  Init OK!");
+
+}
+
+
+void loop()
+{
+  TempoAtual = millis();
+  
+  if(TempoAtual-TempoVel1>2000)                                                   //Se não houver alteração na velocidade em 2000 milisegundos, então VELOCIDADE SERÁ 0
+    velocidade=0;
+     
+   unsigned char len = 0;
+   uint8_t buf[8];
+
+   if(CAN_MSGAVAIL == CAN.checkReceive())
+    {
+        CAN.readMsgBuf(&len, buf);
+
+        unsigned long canId = CAN.getCanId();
+
+        HC12.println("-----------------------------");
+        HC12.print("Data from ID: 0x");
+        HC12.println(canId, HEX);
+        HC12.println(len);
+
+        if(canId == 0x66D){               //Verifica se a mensagmem recebida é de rpm
+            
+            uint8_t rpm_buf[4];    
+            for(int i = 0; i<len-1; i++)
+            {    
+                rpm_buf[i] = buf[i];        //Armazena os dados no array aux_rpm                                       
+            }   
+            comb_buf = buf[len-1]; 
+            COMB = (int)comb_buf;
+            uint8_to_float(&RPM, rpm_buf);  // Converte o array em float e armazena na variavel RPM
+            HC12.println("Comb: ");
+            HC12.println(COMB);
+            HC12.println("RPM : ");
+            HC12.println(RPM); 
+        }      
+    }
+
+  if(RPM <= 1800)
+  {
+   indice = 10; 
+  }
+  else if(RPM > 1800 && RPM <= 2000)
+  {
+    indice = 20;
+  }
+  else if(RPM > 2000 && RPM <= 2200)
+  {
+    indice = 30;
+  }
+  else if(RPM > 2200 && RPM <= 2400)
+  {
+    indice = 40;
+  }
+  else if(RPM > 2400 && RPM <= 2600)
+  {
+    indice = 50;
+  }
+  else if(RPM > 2600 && RPM <= 2800)
+  {
+    indice = 60;
+  }
+  else if(RPM > 2800 && RPM <= 3000)
+  {
+    indice = 70;
+  }
+  else if(RPM > 3000 && RPM <= 3300)
+  {
+    indice = 80;
+  }
+  else if(RPM > 3300 && RPM <= 3600)
+  {
+    indice = 90;
+  }
+  else if(RPM > 3600 && RPM < 3800)
+  {
+    indice = 100;
+  }
+  
+  if(contadorVel1>quantidadePinosVel-1)
+  {
+    noInterrupts();
+    velocidade=3600.0*dist/float(TempoAtual-TempoVel1);                           //Velocidade = ------------------------------- = 3600* ---------
+    TempoVel1 = TempoAtual;                                                       //             tempo(ms)*1000(km)                      tempo(ms)
+    contadorVel1=0;
+    transmissaoHC12(velocidade, RPM); 
+    interrupts();
+  }
+  
+  if(TempoAtual-TempoAntigo>50)
+  {
+    Display(velocidade, RPM, COMB);
+  }
+   analogWrite(LEDPin, indice);
+   TempoAntigo = TempoAtual;
+}
+
+void ContaVelocidade(){
+  noInterrupts();
+  contadorVel1++;
+  interrupts();
+}
 
 int writeBigChar(char ch, byte x, byte y) {
   if (ch < ' ' || ch > '_') return 0;               // If outside table range, do nothing
@@ -442,7 +456,6 @@ int writeBigChar(char ch, byte x, byte y) {
   }
   return nb/2-1;                                      // returns number of columns used by char
 }
-
 
 void writeBigString(char *str, byte x, byte y) {
   char c;
