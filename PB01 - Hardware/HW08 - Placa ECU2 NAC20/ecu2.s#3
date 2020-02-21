@@ -7939,9 +7939,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-66.802" y1="-32.004" x2="-61.722" y2="-32.004" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="UPLOAD" gate="A" pin="3"/>
-<wire x1="-127" y1="-0.762" x2="-120.142" y2="-0.762" width="0.1524" layer="91"/>
-<label x="-120.142" y="-0.762" size="1.778" layer="95"/>
+<pinref part="UPLOAD" gate="A" pin="4"/>
+<wire x1="-127" y1="1.778" x2="-120.142" y2="1.778" width="0.1524" layer="91"/>
+<label x="-120.142" y="1.778" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -7956,9 +7956,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-66.802" y1="-34.544" x2="-61.722" y2="-34.544" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="UPLOAD" gate="A" pin="4"/>
-<wire x1="-127" y1="1.778" x2="-120.142" y2="1.778" width="0.1524" layer="91"/>
-<label x="-120.142" y="1.778" size="1.778" layer="95"/>
+<pinref part="UPLOAD" gate="A" pin="3"/>
+<wire x1="-127" y1="-0.762" x2="-120.142" y2="-0.762" width="0.1524" layer="91"/>
+<label x="-120.142" y="-0.762" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SS" class="0">
